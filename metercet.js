@@ -6,26 +6,23 @@
  */
 // const util = require("util");
 
-const defaultPluginParams = {
-  host: "192.168.0.221",
-  port: 4001,
-  ntariffs:3,
-  metering:[
-  //  { "mid": "P", "period": 10 },
-  //  { "mid": "Q", "period": 1 },
-  //  { "mid": "S", "period": 1 },
-  //  { "mid": "I", "period": 1 },
-  //  { "mid": "U", "period": 1 },
-    { "mid": "E", "period": 10 },
-  //  { "mid": "f", "period": 10 },
-  //  { "mid": "T", "period": 60 },
-  //  { "mid": "cos", "period": 10 },
-    { "mid": "Kuf", "period": 10 }
-  ]
-};
+const channels = require("./lib/channels");
 
 // Standard IH plugin
-const plugin = require("./lib/plugin").Plugin(defaultPluginParams);
+const plugin = require("./lib/plugin").Plugin( {
+    host: "192.168.0.221",
+    port: 4001,
+    password:"000000",
+    ntariffs:3,
+    metering:[
+      { "mid": "P", "period": 1 },
+      { "mid": "Q", "period": 1 },
+      { "mid": "I", "period": 1 },
+      { "mid": "E", "period": 11 },
+      { "mid": "f", "period": 10 },
+      { "mid": "T", "period": 60 }
+    ]
+  });
 
 // Wraps a client connection to TCP
 const agent = require("./lib/agent");
@@ -38,7 +35,10 @@ plugin.log("Plugin has started.");
 plugin.getFromServer("params"); 
 
 plugin.on("params", () => {
-  // Можно соединиться со счетчиком
+  // Получили параметры - генерируем каналы и отдаем их на сервер
+  plugin.sendToServer("channels", channels.formChannels(plugin.params));
+
+  // Cоединяемся со счетчиком
   agent.connect(plugin.params);
 });
 
