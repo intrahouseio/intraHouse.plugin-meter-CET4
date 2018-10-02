@@ -7,10 +7,10 @@ let ps = child.fork("./metercet.js");
 ps.on("message", mes => {
   console.log("Message: " + JSON.stringify(mes));
   if (mes.type == "get") {
-    console.log("TYPE get mes.tablename=" + mes.tablename);
+
     switch (mes.tablename) {
       case "params":
-        ps.send({ type: "get", params: { host: "192.168.0.221", port: 4001 } });
+        ps.send({ type: "get", params: { host: "localhost", port: 4001, meterType:"02"} });
         break;
 
       case "config":

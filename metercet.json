@@ -17,7 +17,13 @@
       "type": "number",
       "val": "4001"
     },
-
+    {
+        "name": "meterType",
+        "note": "Тип счетчика",
+        "type": "droplist",
+        "data": [{"id":"02", "name":"CЭТ-4ТМ.02"},{"id":"03", "name":"CЭТ-4ТМ.03"}],
+        "val":"03"
+    },
     {
       "name": "password",
       "note": "Пароль счетчика",
@@ -71,16 +77,16 @@
         }
       },
       "val": [
-          { "mid": "P", "period": 0 },
-          { "mid": "Q", "period": 0 },
-          { "mid": "S", "period": 0 },
-          { "mid": "I", "period": 0 },
-          { "mid": "U", "period": 0 },
+          { "mid": "P", "period": 1 },
+          { "mid": "Q", "period": 1 },
+          { "mid": "S", "period": 1 },
+          { "mid": "I", "period": 1 },
+          { "mid": "U", "period": 1 },
           { "mid": "E", "period": 1 },
           { "mid": "f", "period": 10 },
           { "mid": "T", "period": 60 },
           { "mid": "cos", "period": 10 },
-          { "mid": "Kuf", "period": 10 }
+          { "mid": "Кuf", "period": 10 }
     ]
     }
   ],
