@@ -2,5 +2,5 @@
     "id":"metercet",
     "description":"Energy meter CET (RS-485) via TCP",
     "cross":true,
-	"version":"0.0.3"
+	"version":"0.0.4"
 }
