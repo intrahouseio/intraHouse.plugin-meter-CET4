@@ -22,6 +22,7 @@ const plugin = require("./lib/plugin").Plugin({
     { mid: "I", period: 1 },
     { mid: "U", period: 1 },
     { mid: "E", period: 1 },
+    { mid: "ES", period: 1 },
     { mid: "f", period: 10 },
     { mid: "cos", period: 1 },
     { mid: "Kuf", period: 1 },
