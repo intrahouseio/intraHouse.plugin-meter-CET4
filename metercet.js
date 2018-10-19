@@ -15,6 +15,9 @@ const plugin = require("./lib/plugin").Plugin({
   password: "000000",
   ntariffs: 3,
   meterType:"02",
+  usehandkt: false,
+  handkti:1,
+  handktu:1,
   metering: [
     { mid: "P", period: 1 },
     { mid: "Q", period: 1 },

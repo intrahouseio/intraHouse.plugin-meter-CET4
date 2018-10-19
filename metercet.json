@@ -21,7 +21,7 @@
         "name": "meterType",
         "note": "Тип счетчика",
         "type": "droplist",
-        "data": [{"id":"02", "name":"CЭТ-4ТМ.02"},{"id":"03", "name":"CЭТ-4ТМ.03"}],
+        "data": [{"id":"02", "name":"CЭТ-4ТМ.02"}],
         "val":"03"
     },
     {
@@ -30,7 +30,30 @@
       "type": "string",
       "val": "000000"
     },
+
+    {
+        "name": "usehandkt",
+        "note": "Использовать коэф-ты, введенные вручную",
+        "type": "cb",
+        "val": false
+      },
     
+      {
+        "name": "handkti",
+        "note": "Коэффициент тока",
+        "type": "number",
+        "val": 1,
+        "visible":"data.usehandkt"
+      },
+      {
+        "name": "handktu",
+        "note": "Коэффициент напряжения",
+        "type": "number",
+        "val": 1,
+        "visible":"data.usehandkt"
+
+      },
+      
     {
         "name": "ntariffs",
         "note": "Число тарифов",
