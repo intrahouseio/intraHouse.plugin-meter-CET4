@@ -18,6 +18,7 @@ const plugin = require("./lib/plugin").Plugin({
   usehandkt: false,
   handkti:1,
   handktu:1,
+  ks:2,
   metering: [
     { mid: "P", period: 1 },
     { mid: "Q", period: 1 },
@@ -29,7 +30,8 @@ const plugin = require("./lib/plugin").Plugin({
     { mid: "f", period: 10 },
     { mid: "cos", period: 1 },
     { mid: "Kuf", period: 1 },
-    { mid: "T", period: 10 }
+    { mid: "T", period: 10 },
+    { mid: "EX", period: 1 }
   ]
 });
 

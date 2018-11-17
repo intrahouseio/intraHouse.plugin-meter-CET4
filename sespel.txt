@@ -1,0 +1,13 @@
+На 1.11.2018
+Meter2 Meter3 - старая конструкция - невозможно снять на начало месяца!
+Взято расчетным путем
+ 
+Meter1: "EAPX":4976237, "EAMX":222, "ERPX":2425194, "ERM":15917
+Meter2  "EAPX":10590727,"EAMX":38,  "ERPX":2400637, "ERM":36911
+Meter3  "EAPX":8179825, "EAMX":238, "ERPX":4557926, "ERM":214419
+Meter4: "EAPX":2199997, "EAMX":770, "ERPX":1133656, "ERMX":5528
+Meter5: "EAPX":569078,  "EAMX":70,  "ERPX":122384,  "ERMX":15262
+Meter6: "EAPX":30328,   "EAMX":161, "ERPX":7156,    "ERMX":334
+Meter7: "EAPX":0.283,   "EAMX":83,   "ERPX":3,      "ERMX":41
+
+  

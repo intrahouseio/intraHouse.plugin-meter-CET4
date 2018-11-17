@@ -18,11 +18,11 @@
       "val": "4001"
     },
     {
-        "name": "meterType",
-        "note": "Тип счетчика",
-        "type": "droplist",
-        "data": [{"id":"02", "name":"CЭТ-4ТМ.02"}],
-        "val":"03"
+      "name": "meterType",
+      "note": "Тип счетчика",
+      "type": "droplist",
+      "data": [{ "id": "02", "name": "CЭТ-4ТМ.02" }],
+      "val": "03"
     },
     {
       "name": "password",
@@ -32,33 +32,40 @@
     },
 
     {
-        "name": "usehandkt",
-        "note": "Использовать коэф-ты, введенные вручную",
-        "type": "cb",
-        "val": false
-      },
-    
-      {
-        "name": "handkti",
-        "note": "Коэффициент тока",
-        "type": "number",
-        "val": 1,
-        "visible":"data.usehandkt"
-      },
-      {
-        "name": "handktu",
-        "note": "Коэффициент напряжения",
-        "type": "number",
-        "val": 1,
-        "visible":"data.usehandkt"
+        "name": "ks",
+        "note": "Коэф-т Кс для мгновенной мощности",
+        "type": "droplist",
+        "data": [{ "id": 1, "name": "1" }, { "id": 2, "name": "2" }],
+        "val": 2
+    },
 
-      },
-      
     {
-        "name": "ntariffs",
-        "note": "Число тарифов",
-        "type": "number",
-        "val": "8"
+      "name": "usehandkt",
+      "note": "Коэф-ты тока и напряжения ввести вручную",
+      "type": "cb",
+      "val": false
+    },
+
+    {
+      "name": "handkti",
+      "note": "Коэффициент тока",
+      "type": "number",
+      "val": 1,
+      "visible": "data.usehandkt"
+    },
+    {
+      "name": "handktu",
+      "note": "Коэффициент напряжения",
+      "type": "number",
+      "val": 1,
+      "visible": "data.usehandkt"
+    },
+
+    {
+      "name": "ntariffs",
+      "note": "Число тарифов",
+      "type": "number",
+      "val": "8"
     },
 
     {
@@ -86,6 +93,10 @@
               {
                 "id": "Kuf",
                 "name": "Киф Коэффициент искажения фазного напряжения, %"
+              },
+              {
+                "id": "EX",
+                "name": "EX Энергия на начало текущего м-ца , Вт*ч"
               }
             ]
           },
@@ -101,18 +112,18 @@
         }
       },
       "val": [
-          { "mid": "P", "period": 1 },
-          { "mid": "Q", "period": 1 },
-          { "mid": "S", "period": 1 },
-          { "mid": "I", "period": 1 },
-          { "mid": "U", "period": 1 },
-          { "mid": "E", "period": 1 },
-          { "mid": "ES", "period": 1 },
-          { "mid": "f", "period": 10 },
-          { "mid": "T", "period": 60 },
-          { "mid": "cos", "period": 10 },
-          { "mid": "Kuf", "period": 10 }
-    ]
+        { "mid": "P", "period": 1 },
+        { "mid": "Q", "period": 1 },
+        { "mid": "S", "period": 1 },
+        { "mid": "I", "period": 1 },
+        { "mid": "U", "period": 1 },
+        { "mid": "E", "period": 1 },
+        { "mid": "ES", "period": 1 },
+        { "mid": "f", "period": 10 },
+        { "mid": "T", "period": 60 },
+        { "mid": "cos", "period": 10 },
+        { "mid": "Kuf", "period": 10 }
+      ]
     }
   ],
 
